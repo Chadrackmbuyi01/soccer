@@ -30,4 +30,12 @@ public class PlayerController {
         playerService.deletePlayer(playerId);
     }
 
+    public void updatePlayer(
+            @PathVariable("playerId") Long playerId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String email){
+        playerService.updatePlayer(playerId, name, email);
+
+    }
+
 }
